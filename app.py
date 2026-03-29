@@ -41,13 +41,13 @@ with col1:
 with col2:
     st.header("📄 2. Blood Report Values")
     # Using the key features from your CSV
-    hgb = st.number_input("Hemoglobin (HGB)", value=12.0)
-    rbc = st.number_input("Red Blood Cells (RBC)", value=4.5)
-    hct = st.number_input("Hematocrit (HCT)", value=38.0)
-    mcv = st.number_input("MCV", value=85.0)
-    mch = st.number_input("MCH", value=30.0)
-    mchc = st.number_input("MCHC", value=33.0)
-    wbc = st.number_input("White Blood Cells (WBC)", value=7.0)
+    hgb = st.number_input("Hemoglobin (HGB)")
+    rbc = st.number_input("Red Blood Cells (RBC)")
+    hct = st.number_input("Hematocrit (HCT)")
+    mcv = st.number_input("MCV")
+    mch = st.number_input("MCH")
+    mchc = st.number_input("MCHC")
+    wbc = st.number_input("White Blood Cells (WBC)")
 
 # --- INTEGRATED ANALYSIS ---
 st.markdown("---")
