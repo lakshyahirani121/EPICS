@@ -1,6 +1,6 @@
 streamlit
-xgboost==1.7.6
-tensorflow-cpu
+xgboost
+tensorflow-cpu==2.15.0
 pandas
 numpy
 Pillow
