@@ -38,7 +38,7 @@ with col1:
 
 with col2:
     st.header("📄 Blood Report")
-    hgb = st.number_input("Hemoglobin (HGB)", value=12.0)
+    hgb = st.number_input("Hemoglobin (HGB)", )
     rbc = st.number_input("RBC", value=4.5)
     hct = st.number_input("HCT", value=38.0)
     mcv = st.number_input("MCV", value=85.0)
