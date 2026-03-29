@@ -38,13 +38,13 @@ with col1:
 
 with col2:
     st.header("📄 Blood Report")
-    hgb = st.number_input("Hemoglobin (HGB)", )
-    rbc = st.number_input("RBC", value=4.5)
-    hct = st.number_input("HCT", value=38.0)
-    mcv = st.number_input("MCV", value=85.0)
-    mch = st.number_input("MCH", value=30.0)
-    mchc = st.number_input("MCHC", value=33.0)
-    wbc = st.number_input("WBC", value=7.0)
+    hgb = st.number_input("Hemoglobin (HGB)")
+    rbc = st.number_input("RBC")
+    hct = st.number_input("HCT")
+    mcv = st.number_input("MCV")
+    mch = st.number_input("MCH")
+    mchc = st.number_input("MCHC")
+    wbc = st.number_input("WBC")
 
     if st.button("Final Analysis"):
         blood_input = np.array([[wbc, 30.0, 60.0, 2.0, 4.0, rbc, hgb, hct, mcv, mch, mchc, 250.0, 14.0, 0.2]])
