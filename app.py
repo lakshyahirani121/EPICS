@@ -25,21 +25,21 @@ def load_models():
 
 fe, vision_brain, blood_brain = load_models()
 
-st.title("🩸 Integrated Hybrid Anemia Diagnostic System")
+st.title(" Integrated Hybrid Anemia Diagnostic System")
 st.markdown("Provide both an eye image and CBC values for a unified diagnosis.")
 
 # --- INPUT SECTION ---
 col1, col2 = st.columns(2)
 
 with col1:
-    st.header("📷 1. Conjunctiva Scan")
+    st.header(" 1. Conjunctiva Scan")
     uploaded_file = st.file_uploader("Upload Image", type=["jpg", "png", "jpeg"])
     if uploaded_file:
         img = Image.open(uploaded_file).convert('RGB').resize((224, 224))
         st.image(img, caption="Eye Image Ready", width=300)
 
 with col2:
-    st.header("📄 2. Blood Report Values")
+    st.header(" 2. Blood Report Values")
     # Using the key features from your CSV
     hgb = st.number_input("Hemoglobin (HGB)")
     rbc = st.number_input("Red Blood Cells (RBC)")
@@ -51,7 +51,7 @@ with col2:
 
 # --- INTEGRATED ANALYSIS ---
 st.markdown("---")
-if st.button("🚀 RUN COMPLETE HYBRID DIAGNOSIS"):
+if st.button("RESULTS"):
     if uploaded_file:
         # 1. Process Vision Path
         img_array = tf.keras.applications.efficientnet.preprocess_input(np.array(img))
@@ -84,7 +84,7 @@ if st.button("🚀 RUN COMPLETE HYBRID DIAGNOSIS"):
             
         st.progress(final_score)
     else:
-        st.warning("⚠️ Please upload an eye image first to complete the hybrid analysis.")
+        st.warning(" Please upload an eye image first to complete the hybrid analysis.")
 
 st.sidebar.markdown("### Project Info")
 st.sidebar.write("EPICS 2026: Multimodal Anemia Detection")
