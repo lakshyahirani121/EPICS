@@ -32,14 +32,14 @@ st.markdown("Provide both an eye image and CBC values for a unified diagnosis.")
 col1, col2 = st.columns(2)
 
 with col1:
-    st.header(" 1. Conjunctiva Scan")
+    st.header("Conjunctiva Scan")
     uploaded_file = st.file_uploader("Upload Image", type=["jpg", "png", "jpeg"])
     if uploaded_file:
         img = Image.open(uploaded_file).convert('RGB').resize((224, 224))
         st.image(img, caption="Eye Image Ready", width=300)
 
 with col2:
-    st.header(" 2. Blood Report Values")
+    st.header("Blood Report Values")
     # Using the key features from your CSV
     hgb = st.number_input("Hemoglobin (HGB)")
     rbc = st.number_input("Red Blood Cells (RBC)")
